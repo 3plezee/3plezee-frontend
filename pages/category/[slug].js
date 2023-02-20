@@ -26,23 +26,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps(context) {
-  const slug = context.params.slug;
-
-  // if (`${NEXT_MODE}` == "DEV") {
-  //   var orig = `${API_URL}`;
-  // } else if (`${NEXT_MODE}` == "PROD") {
-  //   var orig = "";
-  // }
-  let orig = "http://127.0.0.1:8000";
-
-  return {
-    props: { orig: orig },
-    revalidate: 10,
-  };
-}
-
-function Category({ orig }) {
+function Category() {
   const router = useRouter();
   const isMd = useMediaQuery(960);
   const { slug } = router.query;
