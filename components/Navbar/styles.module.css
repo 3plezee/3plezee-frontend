@@ -1,0 +1,40 @@
+.miniCartBtnWrapper{
+    width: 100px;
+    border: 1px solid #000;
+    display: flex;
+    height: 30px;
+    
+}
+
+.miniCartBtn{
+    width: 30%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+.miniCartBtn:hover{
+    color: #b59677;
+}
+.miniCartCount{
+    width: 40%;
+    font-size: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    color:"yellow"!important
+    
+}
+
+.link:hover{
+    color:"var(--nextui-colors-text)"!important
+}
+.link::after{
+    color:"var(--nextui-colors-text)"!important
+}

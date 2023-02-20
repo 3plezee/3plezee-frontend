@@ -1,0 +1,27 @@
+.sidebarLinks {
+  background: var(--nextui--navbarBlurBackgroundColor);
+  color: var(--nextui-colors-text);
+}
+.active {
+  background: #b59677;
+  color: white;
+}
+.sidebarToggler {
+  display: none;
+}
+@media (max-width: 960px) {
+  .sidebar {
+    z-index: 2;
+    position: absolute;
+    display: none !important;
+    height: 80vh;
+  }
+  .sidebarToggler {
+    background: #b59677;
+    position: absolute;
+    top: 30%;
+    z-index: 3;
+    display: block;
+    padding: 5px;
+  }
+}

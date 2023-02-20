@@ -1,0 +1,18 @@
+.overlay{
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    top: 90px;
+    background: rgba(73, 49, 18, 0.4);
+    z-index: 111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:960px){
+    .overlay{
+        top: 83px;
+        
+    }
+}

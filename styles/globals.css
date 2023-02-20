@@ -1,0 +1,216 @@
+html,
+body {
+  padding: 0;
+  font-size: large;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  /* width: 100vw !important; */
+  position: relative;
+  background: var(--nextui-colors-background);
+  font-family: Montserrat;
+  /* display: flex;
+  justify-content: center; */
+}
+
+a {
+  /* text-decoration: none; */
+  color: unset;
+  text-decoration: unset;
+}
+a:hover {
+  color: var(--nextui-colors-warning);
+}
+
+* {
+  box-sizing: border-box;
+}
+.awssld__bullets {
+  display: none !important;
+}
+.Home_main__nLjiQ {
+  min-height: unset !important;
+}
+.nextui-collapse-title {
+  color: white !important;
+}
+.our_products_buttons button {
+  border: 2px solid #b59677;
+  width: 100px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--nextui-colors-text);
+}
+.our_products_buttons button:hover {
+  color: var(--nextui-colors-text);
+  background: #b59677;
+  color: white;
+}
+.active_btn {
+  background: #b59677;
+  color: white !important;
+  transform: translateX(2x);
+}
+h3 {
+  font-size: 20px !important;
+}
+.cartAmount {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: -1px;
+  background-color: #b59677;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-cart-size-button {
+  padding: 1px;
+  border-radius: 50%;
+  border: 2px solid #1d1f22;
+  margin-bottom: 2px;
+  margin-right: 8px;
+  font-size: 14px;
+  background: transparent;
+  min-width: 30px;
+  min-height: 30px;
+  /* padding: 5px; */
+  font-size: 16px;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  color: var(--nextui-colors-text);
+}
+.main-cart-size-button-active {
+  background: #1d1f22;
+  color: white;
+}
+/* .main-cart-color-button{
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  outline: #a39d98 1px solid;
+  border: 2px solid whitesmoke;
+  
+} */
+/* .main-cart-color-button-active{
+  transform:scale(1.1, 1.1) ;
+  outline: #b59677 1px solid;
+  border: 2px solid whitesmoke;
+  outline-offset: 1px;
+} */
+
+.attr-div input[type="radio"] {
+  box-sizing: border-box;
+  appearance: none;
+
+  border: 0.5px #1d1f22 solid;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.attr-div input[type="radio"]:checked {
+  transform: scale(1.1, 1.1);
+  outline: #b59677 1px solid;
+  border: 0.9px solid whitesmoke;
+  outline-offset: 1px;
+}
+.attr-div input[type="radio" i]:focus {
+  outline-offset: 2px;
+}
+
+.attr-div .attr-label {
+  /* padding-right: 10px; */
+}
+.attr-label {
+  margin-right: 40px;
+  padding: 5px;
+  position: relative;
+  font-family: "Source Sans Pro";
+  cursor: pointer;
+}
+.attr-label input {
+  display: none;
+}
+.attr-label span {
+  position: absolute;
+  top: 0;
+  border: 2px solid #b59677;
+  /* padding: 5px; */
+  min-width: 30px;
+  text-align: center;
+  height: 30px;
+  line-height: 25px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--nextui-colors-text);
+}
+.attr-label input:checked + span {
+  background: #b59677;
+
+  color: white;
+}
+
+.scrollbar::-webkit-scrollbar {
+  background: #483c2f;
+  width: 0.2em;
+}
+.scrollbar:hover::-webkit-scrollbar-thumb {
+  background: #b59677;
+}
+.nextui-c-eXOOPO-lkBNdM-isTextarea-false {
+  height: unset;
+  min-height: 40px;
+  border-radius: 24px;
+}
+.awssld__content > img {
+  max-height: 100%;
+}
+
+.awssld__controls button .awssld__controls__arrow-left,
+.awssld__controls button .awssld__controls__arrow-right {
+  opacity: 0 !important;
+}
+@media (prefers-color-scheme: linearGradient) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@media (max-width: 960px) {
+  .cartAmount {
+    top: -4px;
+    right: -10px;
+    top: -1px;
+  }
+  .our_products_buttons button {
+    width: 90px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .main-cart-color-button {
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    outline: #a39d98 1px solid;
+    border: 2px solid whitesmoke;
+  }
+}
