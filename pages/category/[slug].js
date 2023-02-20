@@ -11,21 +11,6 @@ import { MyStyledButton } from "../../components/Buttons/myStyledButton";
 import { storeContext } from "../../components/context/Store";
 import Button2 from "../../components/Buttons/Button2";
 
-export const getStaticPaths = async () => {
-  let res = await fetch(`http://127.0.0.1:8000/dashboard/categories/`);
-  let response = await res.json();
-
-  const paths = response.data.map((category) => {
-    return {
-      params: { slug: category.slug.toString() },
-    };
-  });
-  return {
-    paths,
-    fallback: "blocking",
-  };
-};
-
 function Category() {
   const router = useRouter();
   const isMd = useMediaQuery(960);
