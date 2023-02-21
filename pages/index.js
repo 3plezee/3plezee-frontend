@@ -109,6 +109,50 @@ export default function Home() {
     getProducts();
   }, []);
 
+  const addMessage = async (params) => {
+    let res = await fetch("/api/contact-us/", {
+      method: "POST",
+
+      body: JSON.stringify(params),
+    });
+    let response = await res.json();
+    if (res.ok) {
+      toast.success("Message added", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: isDark ? "dark" : "light",
+      });
+      return true;
+    } else {
+      toast.error(" Failed to add message", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: isDark ? "dark" : "light",
+      });
+      return false;
+    }
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    var formData = new FormData(e.target);
+
+    const form_values = Object.fromEntries(formData);
+    let u = addMessage(form_values);
+    if (u) {
+      e.target.reset();
+    }
+  };
   const isMd = useMediaQuery(960);
   const { theme } = useTheme();
   const SecondMain = {
@@ -188,11 +232,7 @@ export default function Home() {
           </Grid.Container>
 
           <Spacer />
-          <div className="d-flex justify-content-center">
-            <Button2 text={"Load more"} />
-          </div>
-          <Spacer />
-          <Spacer />
+
           <Spacer />
           <Grid className="d-grid justify-content-center" direction={"row"}>
             <Text
@@ -217,7 +257,9 @@ export default function Home() {
             <div className="our_products_buttons">
               <button className="active_btn btn">All</button>
               <button className="btn h-100 p-0">Top rated</button>
-              <button className="btn">Featured</button>
+              <button className="btn" disabled>
+                Featured
+              </button>
             </div>
           </Grid.Container>
           <Spacer />
@@ -236,6 +278,11 @@ export default function Home() {
               );
             })}
           </Grid.Container>
+          <Spacer />
+          <div className="d-flex justify-content-center">
+            <Button2 text={"Load more"} />
+          </div>
+          <Spacer />
 
           <Spacer />
         </Container>
@@ -353,7 +400,7 @@ export default function Home() {
           <Grid className="p-3" direction="column" xs={isMd ? 12 : 6}>
             <Text h4>DROP US A LINE</Text>
 
-            <div className="row">
+            <form onSubmit={submitHandler} className="row">
               <div className="col-12 mt-1 mb-1">
                 <label style={{ color: "var(--nextui-colors-text)" }}>
                   Name
@@ -410,7 +457,7 @@ export default function Home() {
                   SEND
                 </MyStyledButton>
               </div>
-            </div>
+            </form>
           </Grid>
           <Grid className="p-3" direction="column" xs={isMd ? 12 : 6}>
             <Text h4>CONTACT INFORMATION</Text>

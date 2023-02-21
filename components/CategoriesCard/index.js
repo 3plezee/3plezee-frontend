@@ -17,11 +17,11 @@ function CategoryCard(params) {
               isHoverable
             >
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col>
-                  <Text transform="uppercase" h3 color="black">
+                <Col css={{ height: "100%", backdropFilter: "revert" }}>
+                  <Text b transform="uppercase" h3 color="black">
                     {item.name}
                   </Text>
-                  <Text size={15} color="#4d5959">
+                  <Text b size={15} color="#4d5959">
                     <i>Shop now </i>
                   </Text>
                 </Col>
