@@ -226,8 +226,8 @@ export default function Home() {
           <Spacer />
 
           <Grid.Container
-            direction={isMd ? "column" : "row"}
-            css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
+            // direction={isMd ? "column" : "row"}
+            // css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
             gap={1}
           >
             {latestproducts?.map((item, index) => {
@@ -279,8 +279,8 @@ export default function Home() {
           <Spacer />
 
           <Grid.Container
-            direction={isMd ? "column" : "row"}
-            css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
+            // direction={isMd ? "column" : "row"}
+            // css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
             gap={1}
           >
             {products?.map((item, index) => {
