@@ -3,7 +3,7 @@ import { API_URL } from "../../../utils/data";
 const category = async (req, res) => {
   // requestMethod = req.
   let { slug } = req.query;
-  console.log("slig", slug);
+
   if (req.method === "GET") {
     try {
       const apiRes = await fetch(`${API_URL}/dashboard/category/${slug}`);

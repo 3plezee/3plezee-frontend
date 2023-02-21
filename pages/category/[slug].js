@@ -23,7 +23,6 @@ function Category() {
     });
     let response = await res.json();
     if (res.ok) {
-      console.log("resp", response.data);
       setData(response.data);
     } else {
       // toast(' Failed to get category', {
