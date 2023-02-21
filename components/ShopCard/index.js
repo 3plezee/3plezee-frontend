@@ -40,7 +40,7 @@ function ShopCard(params) {
 
   // const orig = "http://127.0.0.1:8000";
   return (
-    <Grid xs={mq ? 6 : cardCount ?? 3}>
+    <Grid xs={mq ? 12 : cardCount ?? 3}>
       <Zoom triggerOnce cascade>
         <Card
           variant={"shadow"}
