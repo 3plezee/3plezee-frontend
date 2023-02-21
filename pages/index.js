@@ -9,6 +9,8 @@ import {
   Col,
   Input,
   Container,
+  Loading,
+  StyledLoadingContainer,
   Textarea,
 } from "@nextui-org/react";
 import AwesomeSlider from "react-awesome-slider";
@@ -42,7 +44,7 @@ export default function Home() {
       method: "GET",
     });
     let response = await res.json();
-    console.log("res", res, response);
+
     if (res.ok) {
       setCategories(response.data);
     } else {
@@ -64,7 +66,7 @@ export default function Home() {
       method: "GET",
     });
     let response = await res.json();
-    console.log("res produ", res, response);
+
     if (res.ok) {
       setProducts(response.data);
     } else {
@@ -86,7 +88,7 @@ export default function Home() {
       method: "GET",
     });
     let response = await res.json();
-    console.log("res produ", res, response);
+
     if (res.ok) {
       setLatestProducts(response.data);
     } else {
@@ -192,6 +194,12 @@ export default function Home() {
                 </React.Fragment>
               );
             })}
+
+            {!categories && (
+              <div className="d-flex justify-content-center align-items-center">
+                <Loading />
+              </div>
+            )}
           </Grid.Container>
 
           <Spacer />
@@ -218,8 +226,8 @@ export default function Home() {
           <Spacer />
 
           <Grid.Container
-            // direction={isMd ? "column" : "row"}
-            // css={{ maxHeight: "1000px", flexWrap: "wrap" }}
+            direction={isMd ? "column" : "row"}
+            css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
             gap={1}
           >
             {latestproducts?.map((item, index) => {
@@ -229,6 +237,11 @@ export default function Home() {
                 </React.Fragment>
               );
             })}
+            {!latestproducts && (
+              <div className="d-flex justify-content-center align-items-center">
+                <Loading />
+              </div>
+            )}
           </Grid.Container>
 
           <Spacer />
@@ -277,6 +290,12 @@ export default function Home() {
                 </React.Fragment>
               );
             })}
+
+            {!products && (
+              <div className="d-flex justify-content-center align-items-center">
+                <Loading />
+              </div>
+            )}
           </Grid.Container>
           <Spacer />
           <div className="d-flex justify-content-center">

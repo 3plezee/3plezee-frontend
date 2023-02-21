@@ -210,7 +210,7 @@ function NavbarWrapper(params) {
                                 }}
                               >
                                 <Card.Image
-                                  src={item.image}
+                                  src={item.image.image}
                                   // css={{height: isMd ? "90px":"auto"}}
                                   showSkeleton
                                   objectFit="cover"

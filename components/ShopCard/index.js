@@ -21,7 +21,7 @@ function ShopCard(params) {
 
   const ChangeCart = (e) => {
     e.preventDefault();
-    console.log("submitted");
+
     // get data from form
     var formData = new FormData(e.target);
     const form_values = Object.fromEntries(formData);
@@ -44,7 +44,11 @@ function ShopCard(params) {
       <Zoom triggerOnce cascade>
         <Card
           variant={"shadow"}
-          css={{ borderRadius: "unset", width: "100%", height: "100%" }}
+          css={{
+            borderRadius: "unset",
+            width: "100%",
+            height: mq ? "auto" : "100%",
+          }}
           isHoverable
           className={`${styles.ShopCard}`}
         >
@@ -271,7 +275,11 @@ function ShopCard(params) {
           <Grid></Grid>
         </Modal.Body>
         <Modal.Footer>
-          <Link color="#b59677" className="h5" href={`/product/${item.slug}`}>
+          <Link
+            style={{ color: "#b59677" }}
+            className="h5"
+            href={`/product/${item.slug}`}
+          >
             View full details
           </Link>
         </Modal.Footer>

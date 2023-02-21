@@ -95,14 +95,14 @@ function Cart() {
                           // src={item}
                           css={{ height: "100px" }}
                           showSkeleton
-                          src={item.image}
+                          src={item.image.image}
                           objectFit="contain"
                           alt="Card example background"
                           maxDelay={10000}
                         />
                       </Grid>
-                      <Grid css={{ paddingLeft: "10px" }}>
-                        <Text css={{ fontSize: "$lg", margin: "0" }}>
+                      <Grid css={{ paddingLeft: "10px", fontSize: "$sm" }}>
+                        <Text css={{ margin: "0" }}>
                           {item.name.toLocaleLowerCase()}
                         </Text>
                         <Text css={{ margin: "0" }}>Color: Yellow</Text>
@@ -112,7 +112,7 @@ function Cart() {
                   </Grid>
                   <Grid css={{ width: "15%" }}>
                     <Grid className="d-flex  align-items-center">
-                      <Text>$ {item.price}</Text>
+                      <Text css={{ fontSize: "$sm" }}>$ {item.price}</Text>
                     </Grid>
                   </Grid>
                   <Grid css={{ width: "20%" }}>
@@ -132,7 +132,9 @@ function Cart() {
                           </Text>
                         </div>
                         <div className={`${styles.miniCartCount}`}>
-                          <Text b>{item.quantity}</Text>
+                          <Text css={{ fontSize: "$sm" }} b>
+                            {item.quantity}
+                          </Text>
                         </div>
                         <div className={`${styles.miniCartBtn}`}>
                           <Text
@@ -152,7 +154,9 @@ function Cart() {
                   </Grid>
                   <Grid css={{ width: "13%" }}>
                     <Grid className="d-flex justify-content-end align-items-center">
-                      <Text>${item.price * item.quantity}</Text>
+                      <Text css={{ fontSize: "$sm" }}>
+                        ${item.price * item.quantity}
+                      </Text>
                     </Grid>
                   </Grid>
                 </Grid.Container>

@@ -29,7 +29,7 @@ function CheckoutCart() {
                     // src={item}
                     css={{ width: "100px" }}
                     showSkeleton
-                    src={item.image}
+                    src={item.image.image}
                     objectFit="contain"
                     alt="Card example background"
                     maxDelay={10000}

@@ -150,11 +150,12 @@ function ProductDetails() {
   const getAvgRating = (params) => {
     const rating = params.map((e) => e.rating);
 
-    const y = sum(rating) / params.length;
-
+    let y = sum(rating) / params.length;
+    if (y === NaN) {
+      y = 0;
+    }
     setMainRating(parseFloat(y.toFixed(1)));
     // return y.toFixed(1)
-    console.log(mainRating);
   };
 
   useEffect(() => {
@@ -255,7 +256,6 @@ function ProductDetails() {
                     ${product?.price}
                   </Text>
                   <Spacer />
-                  {console.log("fg", mainRating)}
                   {mainRating > 0 && (
                     <ReactStars
                       count={5}

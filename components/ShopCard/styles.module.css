@@ -1,167 +1,156 @@
+.input {
+  height: 100%;
+  width: 90%;
 
-.input{
-    height: 100%;
-    width: 90%;
-    
-    /* border: 1px solid black; */
-    background-color: rgba(0,0,0,.08);
-    border: unset;
-    color: white;
-    padding: 5px;
+  /* border: 1px solid black; */
+  background-color: rgba(0, 0, 0, 0.08);
+  border: unset;
+  color: white;
+  padding: 5px;
 }
 
-.modal{
-    background: var(--nextui-colors-backgroundAlpha);;
+.modal {
+  background: var(--nextui-colors-backgroundAlpha);
 }
-.moreInfoWrapper{
-    /* width: 60%; */
-     /* min-height: 200px; */
-     margin-bottom: 20px;
-    /* display: none; */
-    padding: 25px; 
-    /* position: absolute; */
-    /* bottom: 20%;
+.moreInfoWrapper {
+  /* width: 60%; */
+  /* min-height: 200px; */
+  margin-bottom: 20px;
+  /* display: none; */
+  padding: 25px;
+  /* position: absolute; */
+  /* bottom: 20%;
     left: -200%; */
-    /* background: var(--nextui-colors-backgroundAlpha); */
-    
+  /* background: var(--nextui-colors-backgroundAlpha); */
 }
 /* .ShopCard:hover  .moreInfoWrapper{
     display: block;
     /* background: red; */
-    /* animation:m_move_on 0.7s forwards; */
-/* } */ 
+/* animation:m_move_on 0.7s forwards; */
+/* } */
 /* @keyframes m_move_on {
     from {left:-200%;}
     to {left:20%;}
 } */
 
-.shop_card_footer{
-    
-    background: #b59677;
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    
+.shop_card_footer {
+  background: #b59677;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
 }
-.productColor{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.productColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
-.wishlist{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    
-    border-radius: 50%;
-        padding: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    color: rgb(193, 176, 176);
-    
-    /* background: white; */
-    background: var(--nextui--navbarBlurBackgroundColor);
-    backdrop-filter: saturate(180%) blur(var(--nextui--navbarBlur))
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(193, 176, 176);
+
+  /* background: white; */
+  background: var(--nextui--navbarBlurBackgroundColor);
+  backdrop-filter: saturate(180%) blur(var(--nextui--navbarBlur));
 }
 
-.modal_body::-webkit-scrollbar{
-    background: #483c2f;
-    width: 0.2em;
-
+.modal_body::-webkit-scrollbar {
+  background: #483c2f;
+  width: 0.2em;
 }
-.modal_body::-webkit-scrollbar-thumb{
-    background: #b59677;
-    width: 0.2em;
-
+.modal_body::-webkit-scrollbar-thumb {
+  background: #b59677;
+  width: 0.2em;
 }
-.addToCartWrapper{
-    
-    /* position: absolute;
+.addToCartWrapper {
+  /* position: absolute;
     bottom: 0px; */
-    /* right: -50px; */
-    width: 100%;
-    height: 60px;
-    /* border-radius: 50%; */
-    /* overflow: hidden; */
-    /* padding: 10px; */
-    /* margin-left: 5px;
+  /* right: -50px; */
+  width: 100%;
+  height: 40px;
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  /* padding: 10px; */
+  /* margin-left: 5px;
     margin-right: 8px; */
-    background-color: #8e7459c2;
-    color: white;
-    cursor: pointer;
-    border-radius: unset !important;
-
+  background-color: #8e7459c2;
+  color: white;
+  cursor: pointer;
+  border-radius: unset !important;
 }
-.addToCartWrapper:hover{
-    background: #8e7459;
+.addToCartWrapper:hover {
+  background: #8e7459;
 }
 
 /* .ShopCard:hover  .addToCartWrapper{
     
     /* background: red; */
-    /* animation:c_move_on 0.6s forwards; */
+/* animation:c_move_on 0.6s forwards; */
 /* }  */
 /* @keyframes c_move_on {
     from {right:-50px;}
     to {right:10px;}
 } */
 
+@media (max-width: 960px) {
+  .moreInfoWrapper {
+    display: none;
+  }
+  .ShopCard:hover .moreInfoWrapper {
+    display: block;
+    /* background: red; */
+    animation: unset;
+  }
+  .ShopCard:hover .addToCartWrapper {
+    /* background: red; */
+    animation: unset;
+  }
+  .shop_card_footer {
+    height: 30px;
+  }
+  .add_Cart,
+  .minus_Cart {
+    font-size: unset;
+  }
+  .wishlist {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8e7459;
+    /* background: white; */
+    background: var(--nextui--navbarBlurBackgroundColor);
+    backdrop-filter: saturate(180%) blur(var(--nextui--navbarBlur));
+  }
+  .addToCartWrapper {
+    /* position: absolute; */
+    display: block;
+    /* bottom: 5px; */
+    /* right: 10px; */
+    width: 100%;
+    height: 30px;
+    /* border-radius: 50%; */
+    overflow: hidden;
 
-
-@media (max-width:960px) {
-    .moreInfoWrapper{
-        display: none;
-    }
-    .ShopCard:hover  .moreInfoWrapper{
-        display: block;
-        /* background: red; */
-        animation: unset;
-    }
-    .ShopCard:hover  .addToCartWrapper{
-    
-        /* background: red; */
-        animation: unset;
-    }
-    .shop_card_footer{
-        height: 30px;
-    }
-    .add_Cart, .minus_Cart{
-        font-size: unset;
-    }
-    .wishlist{
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #8e7459;
-        /* background: white; */
-        background: var(--nextui--navbarBlurBackgroundColor);
-        backdrop-filter: saturate(180%) blur(var(--nextui--navbarBlur))
-    }
-    .addToCartWrapper{
-        /* position: absolute; */
-        display: block;
-        /* bottom: 5px; */
-        /* right: 10px; */
-        width: 100%;
-        height: 45px;
-        /* border-radius: 50%; */
-        overflow: hidden;
-        
-        background-color: #8e7459;
-        color: white;
-        border-radius: unset !important;
-    
-    }
+    background-color: #8e7459;
+    color: white;
+    border-radius: unset !important;
+  }
 }
