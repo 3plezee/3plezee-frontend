@@ -149,13 +149,10 @@ function ProductDetails() {
 
   const getAvgRating = (params) => {
     const rating = params.map((e) => e.rating);
-
-    let y = sum(rating) / params.length;
-    if (y === NaN) {
-      y = 0;
+    if (rating.length > 0) {
+      let y = sum(rating) / params.length;
+      setMainRating(parseFloat(y.toFixed(1)));
     }
-    setMainRating(parseFloat(y.toFixed(1)));
-    // return y.toFixed(1)
   };
 
   useEffect(() => {

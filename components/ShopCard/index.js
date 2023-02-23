@@ -78,14 +78,14 @@ function ShopCard(params) {
                     ? "/svg/heart-active.svg"
                     : "/svg/heart-light.svg"
                 }
-                width="50"
+                width={90}
                 onClick={() =>
                   dispatch({
                     type: "WISHLIST_ITEM",
                     payload: { name: item.name, slug: item.slug },
                   })
                 }
-                height={"50"}
+                height={90}
                 alt=""
                 style={{ cursor: "pointer" }}
               />
