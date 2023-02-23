@@ -97,7 +97,7 @@ function CheckoutCart() {
         </Grid>
         <Grid css={{ display: "flex", justifyContent: "flex-end" }} xs={"6"}>
           <Text css={{ fontSize: "large" }} b>
-            pending
+            Shipping will be calculated during payment
           </Text>
         </Grid>
       </Grid.Container>
@@ -109,7 +109,7 @@ function CheckoutCart() {
         </Grid>
         <Grid css={{ display: "flex", justifyContent: "flex-end" }} xs={"6"}>
           <Text css={{ fontSize: "x-large" }} b>
-            $ {SubTotalCalculator(state.cart.content)} + shipping
+            $ {SubTotalCalculator(state.cart.content)}
           </Text>
         </Grid>
       </Grid.Container>
