@@ -70,7 +70,7 @@ function CheckoutCart() {
 
               <Grid className="d-flex justify-content-center align-items-center">
                 <Text b css={{ textAlign: "end" }}>
-                  $ {item.price}
+                  &#8358; {item.price}
                 </Text>
               </Grid>
             </Grid.Container>

@@ -166,7 +166,9 @@ function Cart() {
               <Grid className="d-grid justify-content-end">
                 <Text css={{ fontSize: "x-large" }} b span>
                   SUBTOTAL:{" "}
-                  <Text span>$ {SubTotalCalculator(state.cart.content)}</Text>
+                  <Text span>
+                    &#8358; {SubTotalCalculator(state.cart.content)}
+                  </Text>
                 </Text>
                 <Spacer />
                 <Text>

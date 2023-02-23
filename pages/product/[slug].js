@@ -250,7 +250,7 @@ function ProductDetails() {
                     {product?.name}
                   </Text>
                   <Text b css={{ fontSize: "18px", color: "$primaryLight" }} h1>
-                    ${product?.price}
+                    &#8358;{product?.price}
                   </Text>
                   <Spacer />
                   {mainRating > 0 && (

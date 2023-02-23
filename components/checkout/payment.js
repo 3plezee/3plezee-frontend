@@ -304,7 +304,7 @@ function Payment() {
             <Text>Total</Text>
           </Grid>
           <Grid>
-            <Text>$ {SubTotalCalculator(state.cart.content)}</Text>
+            <Text>&#8358; {SubTotalCalculator(state.cart.content)}</Text>
           </Grid>
         </Grid.Container>
       </Grid.Container>

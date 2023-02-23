@@ -119,7 +119,7 @@ function ShopCard(params) {
               </Link>
             </Text>
             <Text b css={{ fontSize: mq ? "$xs" : "medium" }}>
-              $ {item.price}
+              &#8358; {item.price}
             </Text>
           </Card.Body>
         </Card>
@@ -152,7 +152,7 @@ function ShopCard(params) {
             <Grid className="d-grid" xs={mq ? 8 : 7}>
               <Text style={{ fontSize: "large" }}>{item.name}</Text>
 
-              <Text style={{ fontSize: "large" }}>${item.price}</Text>
+              <Text style={{ fontSize: "large" }}>&#8358;{item.price}</Text>
             </Grid>
           </Grid.Container>
           <Grid.Container className="d-grid">
@@ -276,8 +276,7 @@ function ShopCard(params) {
         </Modal.Body>
         <Modal.Footer>
           <Link
-            style={{ color: "#b59677" }}
-            className="h5"
+            style={{ color: "#b59677", fontSize: "large" }}
             href={`/product/${item.slug}`}
           >
             View full details

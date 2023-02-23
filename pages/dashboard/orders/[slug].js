@@ -163,7 +163,7 @@ export default function DashboardOrder() {
 
                   <Grid className="d-flex justify-content-center align-items-center">
                     <Text b css={{ textAlign: "end" }}>
-                      $ {item.product_price}
+                      &#8358; {item.product_price}
                     </Text>
                   </Grid>
                 </Grid.Container>
@@ -182,7 +182,7 @@ export default function DashboardOrder() {
               xs={"6"}
             >
               <Text css={{ fontSize: "large" }} b>
-                $ {data?.total}
+                &#8358; {data?.total}
               </Text>
             </Grid>
           </Grid.Container>
@@ -211,7 +211,7 @@ export default function DashboardOrder() {
               xs={"6"}
             >
               <Text css={{ fontSize: "x-large" }} b>
-                $ {data?.total}
+                &#8358; {data?.total}
               </Text>
             </Grid>
           </Grid.Container>

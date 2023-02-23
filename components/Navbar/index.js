@@ -235,7 +235,7 @@ function NavbarWrapper(params) {
                               )}
 
                               <Text css={{ fontSize: "small", margin: "0" }}>
-                                ${item.price}{" "}
+                                &#8358;{item.price}{" "}
                               </Text>
 
                               <Spacer />
@@ -322,7 +322,7 @@ function NavbarWrapper(params) {
                   </Grid.Container>
                   <Spacer />
                   <Text h5>
-                    Sub total: $ {SubTotalCalculator(state.cart.content)}
+                    Sub total: &#8358; {SubTotalCalculator(state.cart.content)}
                   </Text>
                   <Text>
                     {" "}
