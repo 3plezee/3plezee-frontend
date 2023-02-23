@@ -399,13 +399,15 @@ function NavbarWrapper(params) {
                   </Text>
                 </Dropdown.Item>
                 <Dropdown.Item key="settings" withDivider>
-                  <Link className="w-100 h-100" href={"/dashboard/orders"}>
+                  <Link className="w-100 h-100" href={"/dashboard/profile"}>
                     Dashboard
                   </Link>
                 </Dropdown.Item>
 
                 <Dropdown.Item key="analytics" withDivider>
-                  Orders
+                  <Link className="w-100 h-100" href={"/dashboard/orders"}>
+                    Orders
+                  </Link>
                 </Dropdown.Item>
 
                 <Dropdown.Item key="help_and_feedback" withDivider>

@@ -1,5 +1,4 @@
-import { styled, Button, Textarea } from "@nextui-org/react";
-import { Card, Container, Grid, Spacer, Text, Image } from "@nextui-org/react";
+import { Container, Grid, Spacer, Text, Image, Table } from "@nextui-org/react";
 import { useState } from "react";
 import Button2 from "../../components/Buttons/Button2";
 import styles from "./styles.module.css";
@@ -84,85 +83,76 @@ function Cart() {
       </Grid.Container>
       {state.cart.content.length > 0 ? (
         <>
-          {state.cart.content.map((item, index) => {
-            return (
-              <Zoom key={index} triggerOnce>
-                <Grid.Container css={{ marginBottom: "20px" }} direction="row">
-                  <Grid css={{ width: "45%" }}>
-                    <Grid className="d-flex">
-                      <Grid css={{ width: "150px", height: "100px" }}>
-                        <Image
-                          // src={item}
-                          css={{ height: "100px" }}
-                          showSkeleton
-                          src={item.image.image}
-                          objectFit="contain"
-                          alt="Card example background"
-                          maxDelay={10000}
-                        />
-                      </Grid>
-                      <Grid css={{ paddingLeft: "10px", fontSize: "$sm" }}>
-                        <Text css={{ margin: "0" }}>
-                          {item.name.toLocaleLowerCase()}
-                        </Text>
-                        <Text css={{ margin: "0" }}>Color: Yellow</Text>
-                        <Text css={{ margin: "0" }}>Size: XL</Text>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                  <Grid css={{ width: "15%" }}>
-                    <Grid className="d-flex  align-items-center">
-                      <Text css={{ fontSize: "$sm" }}>$ {item.price}</Text>
-                    </Grid>
-                  </Grid>
-                  <Grid css={{ width: "20%" }}>
-                    <div className="d-flex  align-items-center">
-                      <div className={`${styles.miniCartBtnWrapper} mb-1 `}>
-                        <div className={`${styles.miniCartBtn}`}>
-                          <Text
-                            onClick={() => ChangeCart("remove", item)}
-                            css={{
-                              "@hover": {
-                                color: "#b59677",
-                              },
-                            }}
-                            b
-                          >
-                            -
-                          </Text>
-                        </div>
-                        <div className={`${styles.miniCartCount}`}>
-                          <Text css={{ fontSize: "$sm" }} b>
-                            {item.quantity}
-                          </Text>
-                        </div>
-                        <div className={`${styles.miniCartBtn}`}>
-                          <Text
-                            onClick={() => ChangeCart("add", item)}
-                            css={{
-                              "@hover": {
-                                color: "#b59677",
-                              },
-                            }}
-                            b
-                          >
-                            +
-                          </Text>
-                        </div>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid css={{ width: "13%" }}>
-                    <Grid className="d-flex justify-content-end align-items-center">
-                      <Text css={{ fontSize: "$sm" }}>
-                        ${item.price * item.quantity}
-                      </Text>
-                    </Grid>
-                  </Grid>
-                </Grid.Container>
-              </Zoom>
-            );
-          })}
+          {/* start */}
+          <Zoom triggerOnce>
+            <Grid.Container>
+              <Table
+                hoverable
+                shadow
+                color={"warning"}
+                aria-label="Example static collection table"
+                css={{
+                  height: "auto",
+                  minWidth: "100vw",
+                }}
+                selectionMode="single"
+              >
+                <Table.Header css={{ gap: "$10" }}>
+                  <Table.Column>IMAGE</Table.Column>
+                  <Table.Column>PRODUCT</Table.Column>
+                  <Table.Column>PRICE</Table.Column>
+                  <Table.Column>QUANTITY</Table.Column>
+                  <Table.Column>TOTAL</Table.Column>
+                </Table.Header>
+                <Table.Body loadingState={"sorting"}>
+                  {state?.cart?.content.map((item, index) => {
+                    return (
+                      <Table.Row css={{ gap: "$2" }} key={index}>
+                        <Table.Cell>
+                          <Grid css={{ width: "150px", height: "100px" }}>
+                            <Image
+                              // src={item}
+                              css={{ height: "100px" }}
+                              showSkeleton
+                              src={item.image.image}
+                              objectFit="contain"
+                              alt="Card example background"
+                              maxDelay={10000}
+                            />
+                          </Grid>
+                        </Table.Cell>
+                        <Table.Cell>{item.name.toLocaleLowerCase()}</Table.Cell>
+
+                        <Table.Cell>{item.price}</Table.Cell>
+                        <Table.Cell>
+                          <div className="d-flex gap-2">
+                            <div
+                              onClick={() => ChangeCart("remove", item)}
+                              className={styles.mainCartBtn}
+                            >
+                              -
+                            </div>
+                            <div className={styles.mainCartBtn}>
+                              {item.quantity}
+                            </div>
+                            <div
+                              onClick={() => ChangeCart("add", item)}
+                              className={styles.mainCartBtn}
+                            >
+                              +
+                            </div>
+                          </div>
+                        </Table.Cell>
+                        <Table.Cell>{item.price * item.quantity}</Table.Cell>
+                      </Table.Row>
+                    );
+                  })}
+                </Table.Body>
+              </Table>
+            </Grid.Container>
+          </Zoom>
+
+          {/* end */}
 
           <Spacer />
           <form onSubmit={submitHandler}>
@@ -205,15 +195,20 @@ function Cart() {
         </>
       ) : (
         <>
-          <Grid.Container css={{ justifyContent: "center" }} direction="column">
-            <Grid className="d-grid justify-content-center">
-              <Image
+          <Grid.Container direction="column">
+            <Grid className="d-flex flex-column justify-content-center">
+              {/* <Image
                 src={isDark ? "/svg/bag-dark.svg" : "/svg/bag-light.svg"}
-                width="200"
-                height={"200"}
+                width={700}
+                height={700}
+                sizes={"100vw"}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
                 alt=""
-                style={{ cursor: "pointer" }}
-              />
+                // style={{ cursor: "pointer" }}
+              /> */}
               <Text b className="text-center">
                 Your cart is empty
               </Text>

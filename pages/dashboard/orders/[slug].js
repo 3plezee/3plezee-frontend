@@ -28,7 +28,6 @@ export default function DashboardOrder() {
     let response = await res.json();
     if (res.ok) {
       setData(response.data);
-      console.log("response", response);
     }
   };
   useEffect(() => {
@@ -42,8 +41,6 @@ export default function DashboardOrder() {
   }, [slug]);
 
   const getAttr = (param) => {
-    console.log("asdc", param["color"], param);
-
     let y = param.replace(/'/gi, '"');
     y = `${y}`;
     y = JSON.parse(y);
@@ -114,9 +111,10 @@ export default function DashboardOrder() {
                         overflow: "unset",
                       }}
                     >
+                      {item.product_image.image}
                       <Image
                         alt=""
-                        src={"/images/cap.jpg"}
+                        src={item.product_image.image}
                         width={700}
                         height={700}
                         sizes={"100vw"}

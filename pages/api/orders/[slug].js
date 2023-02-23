@@ -35,7 +35,7 @@ const order = async (req, res) => {
       const apiRes = await fetch(`${API_URL}/dashboard/order/${slug}`, {
         method: "GET",
         headers: new Headers({
-          // Authorization: `${req.headers.authorization}`,
+          Authorization: `${req.headers.authorization}`,
         }),
       });
       const data = await apiRes.json();

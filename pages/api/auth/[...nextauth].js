@@ -2,12 +2,13 @@ import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
 import GoogleProvider from "next-auth/providers/google";
+import { redirect } from "next/dist/server/api-utils";
 import { API_URL } from "../../../utils/data";
 export const authOptions = {
   // secret: process.env.SESSION_SECRET,
   session: {
     jwt: true,
-    maxAge: 24 * 60 * 60, // 24 hours
+    maxAge: 48 * 60 * 60, // 48 hours
   },
   // jwt: {
   //   secret: process.env.JWT_SECRET,
@@ -70,6 +71,9 @@ export const authOptions = {
       session.refreshToken = token.refreshToken;
 
       return session;
+    },
+    async redirect({ url, baseUrl }) {
+      return "/";
     },
   },
 };
