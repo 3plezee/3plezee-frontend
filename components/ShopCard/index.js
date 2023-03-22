@@ -77,7 +77,7 @@ function ShopCard(params) {
                 ></Image>
               </Zoom>
             </Link>
-            <div className={styles.wishlist}>
+            <div className={` ${styles.wishlist}`}>
               <Image
                 src={
                   find(state.wishlist.content, {
