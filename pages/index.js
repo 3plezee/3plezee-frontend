@@ -214,7 +214,7 @@ export default function Home() {
               css={{ letterSpacing: isMd ? "3px" : "8px" }}
               h3
             >
-              LATEST PRODUCTS
+              OUR PRODUCTS
             </Text>
             {/* <Image
           src='/svg/filter.svg'
@@ -246,9 +246,15 @@ export default function Home() {
           </div>
 
           <Spacer />
+          <div className="d-flex justify-content-center">
+            <Button2 text={"Load more"} />
+          </div>
+          <Spacer />
 
           <Spacer />
-          <Grid className="d-grid justify-content-center" direction={"row"}>
+
+          <Spacer />
+          {/* <Grid className="d-grid justify-content-center" direction={"row"}>
             <Text
               css={{ letterSpacing: isMd ? "4px" : "8px" }}
               id="our-products"
@@ -257,15 +263,15 @@ export default function Home() {
             >
               OUR PRODUCTS
             </Text>
-            {/* <Image
+            <Image
           src='/svg/filter-active.svg'
             width={60}
             height={60}
           alt=''
-          /> */}
-          </Grid>
+          />
+          </Grid> */}
 
-          <Grid.Container
+          {/* <Grid.Container
             css={{ display: "flex", justifyContent: "center", gap: "2px" }}
           >
             <div className="our_products_buttons">
@@ -275,13 +281,12 @@ export default function Home() {
                 Featured
               </button>
             </div>
-          </Grid.Container>
+          </Grid.Container> */}
           <Spacer />
           <Spacer />
 
-          <Grid.Container
-            // direction={isMd ? "column" : "row"}
-            // css={{ maxHeight: "1000px", maxWidth: "100%", flexWrap: "wrap" }}
+          {/* <Grid.Container
+            
             gap={1}
           >
             {products?.map((item, index) => {
@@ -297,14 +302,14 @@ export default function Home() {
                 <Loading />
               </div>
             )}
-          </Grid.Container>
-          <Spacer />
+          </Grid.Container> */}
+          {/* <Spacer />
           <div className="d-flex justify-content-center">
             <Button2 text={"Load more"} />
           </div>
           <Spacer />
 
-          <Spacer />
+          <Spacer /> */}
         </Container>
         <Text css={{ letterSpacing: isMd ? "1px" : "8px" }} h3>
           @ FOLLOW US ON INSTAGRAM
