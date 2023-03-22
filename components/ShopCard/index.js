@@ -40,21 +40,21 @@ function ShopCard(params) {
 
   // const orig = "http://127.0.0.1:8000";
   return (
-    <div className="col-12 col-md-4 col-lg-3 py-2 p-md-2  ">
+    <div className="col-6 col-md-4 col-lg-3 py-2 p-2  ">
       <Zoom style={{ width: "100%", background: "pink" }} triggerOnce cascade>
         <Card
           variant={"shadow"}
           css={{
             borderRadius: "unset",
             width: mq ? "100%" : "100%",
-            height: mq ? "auto" : "400px",
+            height: mq ? "220px" : "300px",
 
             overflow: "hidden",
           }}
           isHoverable
           className={`${styles.ShopCard}`}
         >
-          <div className="position-relative flex alig-items-center product-card p-2 overflow-hidden">
+          <div className="position-relative flex alig-items-center mb-1 product-card p-2 overflow-hidden">
             <Link href={`/product/${item.slug}`}>
               <Zoom triggerOnce left>
                 <Image
@@ -64,7 +64,7 @@ function ShopCard(params) {
                   //   width="100%"
                   showSkeleton
                   placeholder="/images/img1.jpg"
-                  objectFit="cover"
+                  objectFit="contain"
                   alt="product"
                   maxDelay={10000}
                   width={700}
@@ -72,7 +72,7 @@ function ShopCard(params) {
                   sizes="100vw"
                   style={{
                     width: "100%",
-                    height: "40%",
+                    height: "auto",
                   }}
                 ></Image>
               </Zoom>

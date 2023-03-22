@@ -38,6 +38,8 @@ a:hover {
   height: 280px;
   width: 100%;
 }
+.product-img-wrapper {
+}
 .our_products_buttons button {
   border: 2px solid #b59677;
   width: 100px;
