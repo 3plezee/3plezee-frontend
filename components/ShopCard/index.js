@@ -40,23 +40,25 @@ function ShopCard(params) {
 
   // const orig = "http://127.0.0.1:8000";
   return (
-    <Grid xs={mq ? 12 : cardCount ?? 3}>
-      <Zoom triggerOnce cascade>
+    <div className="col-12 col-md-4 col-lg-3 py-2 p-md-2  ">
+      <Zoom style={{ width: "100%", background: "pink" }} triggerOnce cascade>
         <Card
           variant={"shadow"}
           css={{
             borderRadius: "unset",
-            width: "100%",
-            height: mq ? "auto" : "100%",
+            width: mq ? "100%" : "100%",
+            height: mq ? "auto" : "400px",
+
+            overflow: "hidden",
           }}
           isHoverable
           className={`${styles.ShopCard}`}
         >
-          <div className="position-relative flex alig-items-center product-card p-2 h-100">
+          <div className="position-relative flex alig-items-center product-card p-2 overflow-hidden">
             <Link href={`/product/${item.slug}`}>
               <Zoom triggerOnce left>
-                <Card.Image
-                  css={{ maxHeight: "auto", width: "100%" }}
+                <Image
+                  // css={{ maxHeight: "auto", width: "100%" }}
                   // css={{"height": mq ? "40vh":"75vh"}}
                   src={item.product_image[0]?.image}
                   //   width="100%"
@@ -65,7 +67,14 @@ function ShopCard(params) {
                   objectFit="cover"
                   alt="product"
                   maxDelay={10000}
-                ></Card.Image>
+                  width={700}
+                  height={700}
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "40%",
+                  }}
+                ></Image>
               </Zoom>
             </Link>
             <div className={styles.wishlist}>
@@ -78,16 +87,21 @@ function ShopCard(params) {
                     ? "/svg/heart-active.svg"
                     : "/svg/heart-light.svg"
                 }
-                width={90}
+                width={700}
+                height={700}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   dispatch({
                     type: "WISHLIST_ITEM",
                     payload: { name: item.name, slug: item.slug },
                   })
                 }
-                height={90}
                 alt=""
-                style={{ cursor: "pointer" }}
               />
             </div>
             {/* <form onSubmit={ChangeCart}> */}
@@ -283,7 +297,7 @@ function ShopCard(params) {
           </Link>
         </Modal.Footer>
       </Modal>
-    </Grid>
+    </div>
   );
 }
 export default ShopCard;

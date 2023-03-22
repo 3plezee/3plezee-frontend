@@ -155,7 +155,7 @@ export default function Home() {
       e.target.reset();
     }
   };
-  const isMd = useMediaQuery(960);
+  const isMd = useMediaQuery(760);
   const { theme } = useTheme();
   const SecondMain = {
     image:
@@ -225,15 +225,16 @@ export default function Home() {
           </Grid>
           <Spacer />
 
-          <Grid.Container
+          <div
+            className="row g-0"
             // direction={isMd ? "column" : "row"}
-            css={{ maxWidth: "100%", flexWrap: "wrap" }}
-            gap={1}
+            // css={{ maxWidth: "100vw", flexWrap: "wrap" }}
+            // gap={1}
           >
             {latestproducts?.map((item, index) => {
               return (
                 <React.Fragment key={index}>
-                  <ShopCard mq={isMd} item={item} cardCount={3} />
+                  <ShopCard mq={isMd} item={item} cardCount={4} />
                 </React.Fragment>
               );
             })}
@@ -242,7 +243,7 @@ export default function Home() {
                 <Loading />
               </div>
             )}
-          </Grid.Container>
+          </div>
 
           <Spacer />
 

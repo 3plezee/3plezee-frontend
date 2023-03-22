@@ -34,6 +34,10 @@ a:hover {
 .nextui-collapse-title {
   color: white !important;
 }
+.product-card {
+  height: 280px;
+  width: 100%;
+}
 .our_products_buttons button {
   border: 2px solid #b59677;
   width: 100px;
@@ -132,7 +136,7 @@ h3 {
 }
 .attr-label {
   margin-right: 40px;
-  padding: 5px;
+  padding: 10px;
   position: relative;
   font-family: "Source Sans Pro";
   cursor: pointer;
