@@ -175,17 +175,18 @@ function NavbarWrapper(params) {
                 </Popover.Trigger>
                 <Popover.Content
                   css={{
-                    maxHeight: "500px",
+                    maxHeight: "80vh",
                     overflowY: "hidden",
-                    width: "300px",
+                    width: "50vw",
                     padding: "20px",
+                    borderRadius: "0px",
                   }}
                 >
                   <Text h3>Mini-Cart</Text>
                   <Grid.Container
                     className="gap-3 scrollbar"
                     css={{
-                      maxHeight: "300px",
+                      maxHeight: "50vh",
                       overflowY: "scroll",
                       overflowX: "hidden",
                     }}

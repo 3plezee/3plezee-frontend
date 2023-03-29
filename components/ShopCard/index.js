@@ -52,9 +52,9 @@ function ShopCard(params) {
             overflow: "hidden",
           }}
           isHoverable
-          className={`${styles.ShopCard}`}
+          className={`${styles.ShopCard} p-2`}
         >
-          <div className="position-relative flex alig-items-center mb-1 product-card p-2 overflow-hidden">
+          <div className="position-relative flex alig-items-center mb-1 product-card  overflow-hidden">
             <Link href={`/product/${item.slug}`}>
               <Zoom triggerOnce left>
                 <Image
@@ -108,7 +108,7 @@ function ShopCard(params) {
             <div></div>
           </div>
           <Button
-            className={`${styles.addToCartWrapper} d-flex align-items-center justify-content-around`}
+            className={`${styles.addToCartWrapper} item-center`}
             auto
             shadow
             color="#8e7459"

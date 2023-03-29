@@ -79,7 +79,7 @@
     bottom: 0px; */
   /* right: -50px; */
   width: 100%;
-  height: 40px;
+  height: 60px;
   /* border-radius: 50%; */
   /* overflow: hidden; */
   /* padding: 10px; */
@@ -89,9 +89,13 @@
   color: white;
   cursor: pointer;
   border-radius: unset !important;
+  display: none;
 }
 .addToCartWrapper:hover {
   background: #8e7459;
+}
+.ShopCard:hover .addToCartWrapper {
+  display: block;
 }
 
 /* .ShopCard:hover  .addToCartWrapper{
@@ -146,7 +150,7 @@
     /* bottom: 5px; */
     /* right: 10px; */
     width: 100%;
-    height: 60px;
+    height: 30px;
     /* border-radius: 50%; */
     overflow: hidden;
 

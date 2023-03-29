@@ -232,6 +232,7 @@ function ProductDetails() {
                     placeholder="/images/img1.jpg"
                     objectFit="cover"
                     alt={product?.name}
+                    className="p-2"
                     maxDelay={10000}
                   ></Card.Image>
                 </Card>
