@@ -367,7 +367,7 @@ export default function Home() {
               css={{
                 position: "absolute",
                 width: isMd ? "80%" : "70%",
-                height: "300px",
+                // height: "300px",
                 background: "rgba(181, 150, 119, 0.8)",
                 textAlign: "center",
               }}

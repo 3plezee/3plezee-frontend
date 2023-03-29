@@ -8,7 +8,7 @@ body {
   /* width: 100vw !important; */
   position: relative;
   background: var(--nextui-colors-background);
-  font-family: var(--monteserat-font);
+  font-family: var(--inter-font);
   /* display: flex;
   justify-content: center; */
 }
