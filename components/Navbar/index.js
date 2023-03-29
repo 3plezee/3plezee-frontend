@@ -75,12 +75,21 @@ function NavbarWrapper(params) {
           <Text
             b
             color="inherit"
-            css={{ mr: "$11", fontSize: "large", letterSpacing: "5px" }}
+            css={{
+              mr: "$11",
+              fontSize: "large",
+              letterSpacing: "5px",
+              fontFamily: "var(--roboto-slab)",
+            }}
           >
             3PLEZEE
           </Text>
           <Navbar.Content
-            css={{ gap: "15px", fontSize: "medium" }}
+            css={{
+              gap: "15px",
+              fontSize: "medium",
+              fontFamily: "var(--roboto-slab)",
+            }}
             enableCursorHighlight
             hideIn="xs"
             activeColor={"warning"}
@@ -90,7 +99,6 @@ function NavbarWrapper(params) {
             <Link className="d-flex align-items-center" href="/">
               SHOP
             </Link>
-
             {/* </Navbar.Link> */}
             {/* <Navbar.Link > */}
             <Link
@@ -401,7 +409,7 @@ function NavbarWrapper(params) {
                 </Dropdown.Item>
                 <Dropdown.Item key="settings" withDivider>
                   <Link className="w-100 h-100" href={"/dashboard/profile"}>
-                    Dashboard
+                    Profile
                   </Link>
                 </Dropdown.Item>
 

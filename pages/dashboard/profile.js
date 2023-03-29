@@ -255,7 +255,7 @@ export default function DashboardSettings() {
                 <SelectState data={data2} />
               </div>
 
-              <div className="col-4">
+              {/* <div className="col-4">
                 <label style={{ color: "var(--nextui-colors-text)" }}>
                   Postal Code
                 </label>
@@ -267,7 +267,7 @@ export default function DashboardSettings() {
                   type={"text"}
                   placeholder="Postal code"
                 />
-              </div>
+              </div> */}
               <input value={value.name} type={"hidden"} name="country" />
               <input value={value2} type={"hidden"} name="state" />
 

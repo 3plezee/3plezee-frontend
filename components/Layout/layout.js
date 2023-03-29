@@ -21,9 +21,6 @@ export default function DasboardLayout({ children }) {
 
   return (
     <>
-      <Grid className={styles.sidebarToggler}>
-        <FontAwesomeIcon size={"2x"} color="white" icon={faGear} />
-      </Grid>
       <Container
         css={{
           maxWidth: "1504px",
@@ -34,6 +31,47 @@ export default function DasboardLayout({ children }) {
         fluid
       >
         {/* <Grid.Container> */}
+        <div className="d-md-none d-flex">
+          <ul className="p-0 d-flex gap-3">
+            <li className="mt-4">
+              <MyStyledButton
+                // disabled= {params.disabled ?? false}
+                auto
+                css={{
+                  height: "30px",
+                  width: "100%",
+                  fontSize: "auto",
+                  background: "unset",
+                  color: "Black",
+                }}
+                className={`${styles.sidebarLinks} ${
+                  route.asPath === "/dashboard/orders" ? styles.active : ""
+                } `}
+                // size="mysize"
+                // color="mycolor"
+                onClick={() => changeRoute("/orders")}
+              >
+                ORDERS
+              </MyStyledButton>
+            </li>
+
+            <li className="mt-4">
+              <MyStyledButton
+                // disabled= {params.disabled ?? false}
+                auto
+                css={{ height: "30px", width: "100%", fontSize: "auto" }}
+                //   size="mysize"
+                //   color="mycolor"
+                className={`${styles.sidebarLinks} ${
+                  route.asPath === "/dashboard/profile" ? styles.active : ""
+                } `}
+                onClick={() => changeRoute("/profile")}
+              >
+                PROFILE
+              </MyStyledButton>
+            </li>
+          </ul>
+        </div>
 
         <Grid
           className={styles.sidebar}
@@ -92,7 +130,7 @@ export default function DasboardLayout({ children }) {
         </Grid>
         <Grid
           className="p-2 flex"
-          css={{ flexDirection: "column", overflowY: "auto", height: "80vh" }}
+          css={{ flexDirection: "column", overflowY: "auto", height: "70vh" }}
           xs={isMd ? 12 : 10}
         >
           {children}

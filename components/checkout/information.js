@@ -272,7 +272,7 @@ function Information() {
                 )}
               </div>
 
-              <div className="col-4">
+              {/* <div className="col-4">
                 <label
                   style={{ color: "var(--nextui-colors-text)" }}
                   htmlFor="postal_code"
@@ -288,7 +288,7 @@ function Information() {
                   type={"text"}
                   placeholder="Postal code"
                 />
-              </div>
+              </div> */}
             </div>
             <Spacer />
             <div className="d-flex justify-content-end">

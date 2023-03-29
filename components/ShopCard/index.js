@@ -41,7 +41,11 @@ function ShopCard(params) {
   // const orig = "http://127.0.0.1:8000";
   return (
     <div className="col-12 col-md-4 col-lg-3 py-2 p-2  ">
-      <Zoom style={{ width: "100%", background: "pink" }} triggerOnce cascade>
+      <Zoom
+        style={{ width: "100%", background: "#8e7459c2" }}
+        triggerOnce
+        cascade
+      >
         <Card
           variant={"shadow"}
           css={{

@@ -140,7 +140,7 @@ function Payment() {
         state: user?.state,
         country: user?.country,
         phone_number: user?.phone_number,
-        postal_code: user?.postal_code,
+        postal_code: user?.postal_code ?? "102020",
       },
       total: cartTotal,
       quantity: state?.cart?.amount,
@@ -343,7 +343,7 @@ function Payment() {
             background: "green",
           }}
         >
-          Custom(WahtsApp)
+          Custom(WhatsApp)
         </MyStyledButton>
         <Spacer />
       </Grid.Container>

@@ -207,7 +207,10 @@ function ProductDetails() {
                           <Card.Image
                             onClick={() => ImageHandler(index)}
                             src={item.image}
-                            css={{ height: isMd ? "90px" : "auto" }}
+                            css={{
+                              height: isMd ? "90px" : "auto",
+                              width: "100%",
+                            }}
                             showSkeleton
                             placeholder="/images/img1.jpg"
                             objectFit="cover"
@@ -232,7 +235,7 @@ function ProductDetails() {
                     placeholder="/images/img1.jpg"
                     objectFit="cover"
                     alt={product?.name}
-                    className="p-2"
+                    css={{ minWidth: "50vw" }}
                     maxDelay={10000}
                   ></Card.Image>
                 </Card>
