@@ -84,7 +84,7 @@ export default function DashboardOrders() {
           selectionMode="single"
         >
           <Table.Header css={{ gap: "$10" }}>
-            <Table.Column>Action</Table.Column>
+            {/* <Table.Column>Action</Table.Column> */}
             <Table.Column>ORDER_ID</Table.Column>
             <Table.Column>TRANSACTION_REF</Table.Column>
             <Table.Column>QUANTITY</Table.Column>
@@ -96,12 +96,16 @@ export default function DashboardOrders() {
             {data?.map((item, index) => {
               return (
                 <Table.Row css={{ gap: "$2" }} key={index}>
-                  <Table.Cell>
+                  {/* <Table.Cell>
                     <Link href={`/dashboard/orders/${item.order_id}`}>
                       <EyeIcon size={20} fill="#b59677" />
                     </Link>
+                  </Table.Cell> */}
+                  <Table.Cell>
+                    <Link href={`/dashboard/orders/${item.order_id}`}>
+                      {item.order_id}
+                    </Link>
                   </Table.Cell>
-                  <Table.Cell>{item.order_id}</Table.Cell>
                   <Table.Cell>{item.transaction_ref}</Table.Cell>
                   <Table.Cell>{getQuantity(item.order_items)}</Table.Cell>
                   <Table.Cell>{getTotal(item.order_items)}</Table.Cell>

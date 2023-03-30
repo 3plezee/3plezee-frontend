@@ -56,7 +56,7 @@ export default function DashboardOrder() {
             fontSize: "$2xl",
           }}
         >
-          {data?.order_id}
+          {data?.order_id.substring(0, 10)}
         </Text>
         <Text
           b
