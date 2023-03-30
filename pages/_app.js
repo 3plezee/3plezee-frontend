@@ -113,24 +113,25 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>3PLEZEE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <link rel="icon" href="/favicon1.ico" /> */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/main-logo.jpg"
+          href="https://3plezee.netlify.app/images/main-logo.jpg"
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/jpg"
           sizes="32x32"
-          href="/images/main-logo.jpg"
+          href="https://3plezee.netlify.app/images/main-logo.jpg"
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/jpg"
           sizes="16x16"
-          href="/images/main-logo.jpg"
+          href="https://3plezee.netlify.app/images/main-logo.jpg"
         />
         <link rel="manifest" href="/site.webmanifest" />
 
