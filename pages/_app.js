@@ -8,6 +8,8 @@ import "../styles/globals.css";
 import { useEffect, useContext } from "react";
 import { StoreProvider } from "../components/context/Store";
 import { ToastContainer } from "react-toastify";
+import { useRouter } from "next/router";
+
 import {
   Raleway,
   IBM_Plex_Sans,
@@ -15,6 +17,7 @@ import {
   Roboto_Slab,
   Work_Sans,
 } from "@next/font/google";
+import Head from "next/head";
 const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500"],
   subsets: ["latin"],
@@ -100,8 +103,50 @@ function MyApp({ Component, pageProps }) {
     },
   });
 
+  const {
+    asPath, // the value: "/question/how-do-you-get-the-current-url-in-nextjs/"
+    // the value: "/question/[slug]"
+  } = useRouter();
+
+  const pathname = asPath;
+  const currentPath = `https://devmaesters.com${pathname}`;
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <link rel="icon" href="/favicon1.ico" /> */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/main-logo.jpg"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/main-logo.jpg"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/main-logo.jpg"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <meta charSet="UTF-8" />
+
+        <meta property="og:title" content="3PLEZEE" />
+        <meta
+          property="og:image"
+          content="https://3plezee.netlify.app/images/main-image.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Welcome to 3plezee trendy emporium, center for all your fashion needs"
+        />
+        <meta property="og:url" content={currentPath} />
+      </Head>
       <NextThemesProvider
         defaultTheme="system"
         attribute="class"

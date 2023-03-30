@@ -71,7 +71,12 @@ function NavbarWrapper(params) {
           aria-label="toggle navigation"
         />
         <Navbar.Brand css={{ mr: "$4" }}>
-          <AcmeLogo />
+          {/* <AcmeLogo /> */}
+          <div style={{ marginRight: "10px" }} className="img">
+            {/* <Image width={36} height={36} src={"/images/main-logo.jpg"} />
+            Z */}
+            <Text h1>Z</Text>
+          </div>
           <Text
             b
             color="inherit"
