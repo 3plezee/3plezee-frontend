@@ -119,19 +119,19 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="https://3plezee.netlify.app/images/main-logo.jpg"
+          href="/images/main-logo.jpg"
         />
         <link
           rel="icon"
           type="image/jpg"
           sizes="32x32"
-          href="https://3plezee.netlify.app/images/main-logo.jpg"
+          href="/images/main-logo.jpg"
         />
         <link
           rel="icon"
           type="image/jpg"
           sizes="16x16"
-          href="https://3plezee.netlify.app/images/main-logo.jpg"
+          href="/images/main-logo.jpg"
         />
         <link rel="manifest" href="/site.webmanifest" />
 

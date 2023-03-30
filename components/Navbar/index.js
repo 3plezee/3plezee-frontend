@@ -75,7 +75,9 @@ function NavbarWrapper(params) {
           <div style={{ marginRight: "10px" }} className="img">
             {/* <Image width={36} height={36} src={"/images/main-logo.jpg"} />
             Z */}
-            <Text h1>Z</Text>
+            <Text h1 css={{ color: "#b59677" }}>
+              Z
+            </Text>
           </div>
           <Text
             b
@@ -87,7 +89,7 @@ function NavbarWrapper(params) {
               fontFamily: "var(--roboto-slab)",
             }}
           >
-            3PLEZEE
+            {/* 3PLEZEE */}
           </Text>
           <Navbar.Content
             css={{
