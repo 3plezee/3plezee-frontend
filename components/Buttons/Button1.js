@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from '@nextui-org/react';
 
 const Button1 = (params) => {
-//   const handleConfetti = () => {
-//     confetti({...});
-//   };
+  //   const handleConfetti = () => {
+  //     confetti({...});
+  //   };
 
   return (
     <Button
@@ -12,8 +12,8 @@ const Button1 = (params) => {
       rounded
       ripple={true}
       size="md"
-      
-    //   onClick={handleConfetti}
+
+      //   onClick={handleConfetti}
       css={{
         background: '#b59677',
         fontWeight: '$semibold',
@@ -23,10 +23,10 @@ const Button1 = (params) => {
         color: 'white',
         px: '$14',
         py: '$10',
-        '&:before':{
+        '&:before': {
           background: '#b59677',
         },
-        
+
         '&:after': {
           content: '""',
           position: 'absolute',
@@ -43,7 +43,7 @@ const Button1 = (params) => {
           color: 'White',
           '&:after': {
             transform: 'scaleX(1.5) scaleY(1.6)',
-            opacity: 0, 
+            opacity: 0,
           }
         },
         '&:active': {

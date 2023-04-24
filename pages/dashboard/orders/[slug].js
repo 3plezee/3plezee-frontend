@@ -82,7 +82,7 @@ export default function DashboardOrder() {
           <Text>Quantity: {data?.quantity}</Text>
           <Text>Total: {data?.total}</Text>
           <Text>Shipping Address: {data?.shipping_address}</Text>
-          <Text>Postal code: {data?.postal_code}</Text>
+          {/* <Text>Postal code: {data?.postal_code}</Text> */}
           <Text>Phone Number: {data?.phone_number}</Text>
           <Text>Status: {data?.status}</Text>
           <Text>Payment Method: {data?.payment_method}</Text>

@@ -14,22 +14,23 @@ import Image from "next/image";
 import Button1 from "../Buttons/Button1";
 import { Categoryitems } from "../../utils/data";
 import CapitalizeFirstCharacter from "../textComponent/capitalizeFirstCharacter";
+import { MyStyledButton } from "../Buttons/myStyledButton";
 
 function Footer(params) {
   const { theme, isDark } = useTheme();
   const isMd = useMediaQuery(960);
 
   const Information = [
-    { title: "About us", link: "/" },
-    { title: "Contact us", link: "/" },
-    { title: "Terms & Conditions", link: "/" },
-    { title: "Shipping & Delivery", link: "/" },
-    { title: "Return & Exchange", link: "/" },
-    { title: "Privacy Policy", link: "/" },
+    { title: "About us", link: "/information/about-us" },
+
+    // { title: "Terms & Conditions", link: "/" },
+    { title: "Shipping & Delivery", link: "#" },
+    { title: "Return & Exchange", link: "#" },
+    { title: "Privacy Policy", link: "/information/privacy-policy" },
   ];
   const UsefullLinks = [
-    { title: "Store Location", link: "/" },
-    { title: "Latest News", link: "/" },
+    // { title: "Store Location", link: "/" },
+    // { title: "Latest News", link: "/" },
     { title: "My Account", link: "/dashboard/orders" },
     { title: "Size Guide", link: "/" },
     { title: "FAQs", link: "/" },
@@ -101,26 +102,7 @@ function Footer(params) {
                   </div>
                 </div>
               </Collapse>
-              <Collapse
-                css={{ color: "White", fontSize: "$sm" }}
-                title="CATEGORIES"
-              >
-                <div>
-                  <Spacer />
-                  <Text color="white">
-                    {Categoryitems.map((item, index) => {
-                      return (
-                        <React.Fragment key={index}>
-                          <Link href={`/category/${item.name}`}>
-                            {item.name}
-                          </Link>
-                          <Spacer />
-                        </React.Fragment>
-                      );
-                    })}
-                  </Text>
-                </div>
-              </Collapse>
+
               <Collapse title="INFORMATION">
                 <div>
                   {/* <Text  color="white" h3>
@@ -160,17 +142,24 @@ function Footer(params) {
                   <Grid>
                     <Input
                       clearable
-                      // css={{height:'90px'}}
+                      css={{ width: '100%', marginBottom: "10px" }}
                       height="100px"
                       contentRightStyling={false}
                       placeholder="Enter email..."
-                      contentRight={
-                        //   <SendButton>
-                        //     <SendIcon />
-                        //   </SendButton>
-                        <Button1 text="Subscribe" />
-                      }
+
                     />
+                    <MyStyledButton
+                      ripple
+                      type={"submit"}
+                      // disabled= {params.disabled ?? false}
+                      auto
+                      css={{ height: "45px", width: "100%", fontSize: "auto", borderRadius: "30px" }}
+                      size="mysize"
+                      color="mycolor"
+                      disabled
+                    >
+                      Subscribe
+                    </MyStyledButton>
                   </Grid>
                 </div>
               </Collapse>
@@ -226,7 +215,7 @@ function Footer(params) {
                 </div>
               </div>
             </Grid>
-            <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 2}>
+            {/* <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 2}>
               <div>
                 <Text color="white" h3>
                   CATEGORIES
@@ -245,8 +234,8 @@ function Footer(params) {
                   })}
                 </Text>
               </div>
-            </Grid>
-            <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 2}>
+            </Grid> */}
+            <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 3}>
               <div>
                 <Text color="white" h3>
                   INFORMATION
@@ -264,7 +253,7 @@ function Footer(params) {
                 </Text>
               </div>
             </Grid>
-            <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 2}>
+            <Grid css={{ padding: "10px" }} xs={isMd ? 6 : 3}>
               <div>
                 <Text color="white" h3>
                   USEFULL LINKS
@@ -291,17 +280,34 @@ function Footer(params) {
                 <Grid>
                   <Input
                     clearable
-                    // css={{height:'90px'}}
+                    css={{ width: '100%' }}
                     height="100px"
+                    width="100%"
                     contentRightStyling={false}
                     placeholder="Enter email..."
-                    contentRight={
-                      //   <SendButton>
-                      //     <SendIcon />
-                      //   </SendButton>
-                      <Button1 text="Subscribe" />
-                    }
+                  // contentRight={
+                  //   //   <SendButton>
+                  //   //     <SendIcon />
+                  //   //   </SendButton>
+                  //   <Button1 text="Subscribe" />
+                  // }
                   />
+                  <br />
+                  <br />
+                  {/* <Button1 text="Subscribe" /> */}
+                  <MyStyledButton
+                    ripple
+                    type={"submit"}
+                    // disabled= {params.disabled ?? false}
+                    auto
+                    css={{ height: "45px", width: "100%", fontSize: "auto", borderRadius: "30px" }}
+                    size="mysize"
+                    color="mycolor"
+                    disabled
+                  >
+                    Subscribe
+                  </MyStyledButton>
+                  <Text className="text-light">Join our newsletter to get notified on new products available on our store</Text>
                 </Grid>
               </div>
             </Grid>

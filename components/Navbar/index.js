@@ -270,7 +270,7 @@ function NavbarWrapper(params) {
                                     height={"15"}
                                     alt=""
 
-                                    // style={{margin:"0"}}
+                                  // style={{margin:"0"}}
                                   />
                                 </div>
                                 <div
@@ -404,7 +404,7 @@ function NavbarWrapper(params) {
               <Dropdown.Menu
                 aria-label="User menu actions"
                 color="warning"
-                // onAction={(actionKey) => console.log({ actionKey })}
+              // onAction={(actionKey) => console.log({ actionKey })}
               >
                 <Dropdown.Item key="profile" css={{ height: "$18" }}>
                   <Text b color="inherit" css={{ d: "flex" }}>
@@ -426,9 +426,7 @@ function NavbarWrapper(params) {
                   </Link>
                 </Dropdown.Item>
 
-                <Dropdown.Item key="help_and_feedback" withDivider>
-                  Help & Feedback
-                </Dropdown.Item>
+
                 <Dropdown.Item key="logout" withDivider color="error">
                   <button
                     style={{ color: "inherit" }}
@@ -451,7 +449,7 @@ function NavbarWrapper(params) {
                       className="btn w-100"
                       onClick={() => signIn()}
                     >
-                      Sign up
+                      Sign in
                     </button>
                   </Dropdown.Item>
                 </Dropdown.Menu>
