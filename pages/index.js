@@ -220,9 +220,9 @@ export default function Home() {
 
           <div
             className="row g-0"
-            // direction={isMd ? "column" : "row"}
-            // css={{ maxWidth: "100vw", flexWrap: "wrap" }}
-            // gap={1}
+          // direction={isMd ? "column" : "row"}
+          // css={{ maxWidth: "100vw", flexWrap: "wrap" }}
+          // gap={1}
           >
             {latestproducts?.map((item, index) => {
               return (
@@ -389,7 +389,7 @@ export default function Home() {
                   css={{ fontSize: "large" }}
                   color="#ffffff"
                 >
-                  200 unit housing estate lokoja, kogi state.
+                  Plot 579 Peace Village Market Lugbe, Abuja.
                 </Text>
 
                 <Text
@@ -403,9 +403,9 @@ export default function Home() {
                   Opening Hours
                 </Text>
                 <Text color="#ffffff">
-                  Monday to Friday : 9:00am - 9:00pm
+                  Mondays to Saturdays : 9:00am - 8:00pm
                   <br />
-                  Saturday to Sunday : 9:00am - 9:00pm
+                  Sundays : Closed
                 </Text>
               </Col>
             </Card>
@@ -495,7 +495,7 @@ export default function Home() {
                   height={"50"}
                 />
               </div>
-              <Text> 184 Main Rd E, St Albans Victoria 3021, Australia</Text>
+              <Text> Plot 579 Peace Village Market Lugbe, Abuja.</Text>
             </div>
 
             <Spacer />
@@ -508,7 +508,7 @@ export default function Home() {
                   height={"40"}
                 />
               </div>
-              <Text> 1800-123-222 / 1900-1570-230</Text>
+              <Text> 08165817236</Text>
             </div>
 
             <Spacer />
@@ -521,7 +521,7 @@ export default function Home() {
                   height={"40"}
                 />
               </div>
-              <Text> contact@company.com</Text>
+              <Text> 3plezee.trendyemporium@gmail.com</Text>
             </div>
 
             <Spacer />
@@ -529,7 +529,7 @@ export default function Home() {
               <div>
                 <Image src="/svg/clock.svg" width="40" alt="" height={"40"} />
               </div>
-              <Text> Everyday 9:00-17:00</Text>
+              <Text> Mon-Sun 9:00am-8:00pm</Text>
             </div>
           </Grid>
         </Grid.Container>

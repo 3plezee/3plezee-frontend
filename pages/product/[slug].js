@@ -256,6 +256,10 @@ function ProductDetails() {
                   <Text b css={{ fontSize: "18px", color: "$primaryLight" }} h1>
                     &#8358;{product?.price}
                   </Text>
+                  <Text css={{ fontSize: "18px", color: "$primaryLight" }} h1>
+                    {product?.stock} in stock
+                  </Text>
+
                   <Spacer />
                   {mainRating > 0 && (
                     <ReactStars
@@ -320,7 +324,7 @@ function ProductDetails() {
                                           item.value[0] === e ? "checked" : ""
                                         }
 
-                                        // {item.displayValue}
+                                      // {item.displayValue}
                                       />
                                       <span>{e}</span>
                                     </label>

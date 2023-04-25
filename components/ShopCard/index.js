@@ -146,6 +146,7 @@ function ShopCard(params) {
       </Zoom>
       <Modal
         className={styles.modal}
+        css={{ border: "2px solid #b59677" }}
         scroll
         width="400px"
         aria-labelledby="modal-title"
@@ -246,7 +247,7 @@ function ShopCard(params) {
                                           item.value[0] === e ? "checked" : ""
                                         }
 
-                                        // {item.displayValue}
+                                      // {item.displayValue}
                                       />
                                       <span>
                                         {item.value[index].toLocaleUpperCase()}

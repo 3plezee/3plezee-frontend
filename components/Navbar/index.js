@@ -61,6 +61,9 @@ function NavbarWrapper(params) {
       dispatch({ type: "CART_DELETE_ITEM", payload: { ...prod } });
     }
   };
+  const searchProduct = () => {
+    router.push('/search')
+  }
 
   return (
     <>
@@ -146,25 +149,29 @@ function NavbarWrapper(params) {
               },
             }}
           >
-            <Input
-              clearable
-              contentLeft={
-                <SearchIcon fill="var(--nextui-colors-accents6)" size={16} />
-              }
-              contentLeftStyling={false}
-              css={{
-                w: "100%",
-                "@xsMax": {
-                  mw: "300px",
-                },
-                "& .nextui-input-content--left": {
-                  h: "100%",
-                  ml: "$4",
-                  dflex: "center",
-                },
-              }}
-              placeholder="Search..."
-            />
+            <form onSubmit={searchProduct}>
+              <Input
+                clearable
+
+                required name="q"
+                contentLeft={
+                  <SearchIcon fill="var(--nextui-colors-accents6)" size={16} />
+                }
+                contentLeftStyling={false}
+                css={{
+                  w: "100%",
+                  "@xsMax": {
+                    mw: "300px",
+                  },
+                  "& .nextui-input-content--left": {
+                    h: "100%",
+                    ml: "$4",
+                    dflex: "center",
+                  },
+                }}
+                placeholder="Search..."
+              />
+            </form>
           </Navbar.Item>
           <Navbar.Item
             css={isMd ? { display: "none" } : { width: "25px", height: "25px" }}

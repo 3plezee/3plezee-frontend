@@ -69,9 +69,9 @@ function Footer(params) {
                       />
                     </div>
                     <Text color="white">
-                      184 Main Rd E, St Albans
+                      Plot 579 Peace Village Market
                       <br />
-                      VIC 3021, Australia
+                      Lugbe, Abuja.
                     </Text>
                   </div>
 
@@ -85,7 +85,7 @@ function Footer(params) {
                         height={"20"}
                       />
                     </div>
-                    <Text color="white"> contact@company.com</Text>
+                    <Text color="white"> 3plezee.trendyemporium@gmail.com</Text>
                   </div>
 
                   <Spacer />
@@ -98,7 +98,7 @@ function Footer(params) {
                         height={"20"}
                       />
                     </div>
-                    <Text color="white">+001 2233 456</Text>
+                    <Text color="white">08165817236</Text>
                   </div>
                 </div>
               </Collapse>
@@ -182,9 +182,9 @@ function Footer(params) {
                     />
                   </div>
                   <Text color="white">
-                    184 Main Rd E, St Albans
+                    Plot 579 Peace Village Market
                     <br />
-                    VIC 3021, Australia
+                    Lugbe, Abuja.
                   </Text>
                 </div>
 
@@ -198,7 +198,7 @@ function Footer(params) {
                       height={"20"}
                     />
                   </div>
-                  <Text color="white"> contact@company.com</Text>
+                  <Text color="white"> 3plezee.trendyemporium@gmail.com</Text>
                 </div>
 
                 <Spacer />
@@ -211,7 +211,7 @@ function Footer(params) {
                       height={"20"}
                     />
                   </div>
-                  <Text color="white">+001 2233 456</Text>
+                  <Text color="white">08165817236</Text>
                 </div>
               </div>
             </Grid>
