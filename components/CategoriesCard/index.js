@@ -7,23 +7,22 @@ function CategoryCard(params) {
 
   return (
     <>
-      <Grid xs={mq ? 12 : 3}>
+      <Grid xs={mq ? 12 : 6} >
         <Link href={`/category/${item.slug.toLocaleLowerCase()}`}>
           <Zoom left triggerOnce cascade>
             <Card
-              css={{ height: "250px" }}
+              css={{ width: "100%", maxHeight: '70vh' }}
               variant="flat"
               isPressable
               isHoverable
+              className="w-full "
             >
-              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col css={{ height: "100%", backdropFilter: "revert" }}>
+              <Card.Header css={{ position: "absolute", zIndex: 2, top: 5, left: 5, maxWidth: '35%', background: '$backgroundAlpha' }}>
+                <Col css={{ height: "100%" }}>
                   <Text b transform="uppercase" h3 color="black">
                     {item.name}
                   </Text>
-                  <Text b size={15} color="#4d5959">
-                    <i>Shop now </i>
-                  </Text>
+
                 </Col>
               </Card.Header>
               <Card.Image
@@ -33,6 +32,7 @@ function CategoryCard(params) {
                 objectFit="cover"
                 alt="Card example background"
                 showSkeleton
+
                 maxDelay={10000}
               ></Card.Image>
             </Card>

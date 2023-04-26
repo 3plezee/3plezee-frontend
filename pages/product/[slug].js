@@ -233,9 +233,9 @@ function ProductDetails() {
                     src={product?.product_image[mainImageIndex].image}
                     showSkeleton
                     placeholder="/images/img1.jpg"
-                    objectFit="cover"
+                    objectFit={"contain"}
                     alt={product?.name}
-                    css={{ minWidth: "50vw" }}
+                    css={{ minWidth: "50vw", maxHeight: "70vh" }}
                     maxDelay={10000}
                   ></Card.Image>
                 </Card>

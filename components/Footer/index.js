@@ -85,7 +85,7 @@ function Footer(params) {
                         height={"20"}
                       />
                     </div>
-                    <Text color="white"> 3plezee.trendyemporium@gmail.com</Text>
+                    <Text color="white"> 3plezee.emporium@gmail.com</Text>
                   </div>
 
                   <Spacer />
@@ -198,7 +198,7 @@ function Footer(params) {
                       height={"20"}
                     />
                   </div>
-                  <Text color="white"> 3plezee.trendyemporium@gmail.com</Text>
+                  <Text color="white"> 3plezee.emporium@gmail.com</Text>
                 </div>
 
                 <Spacer />

@@ -157,7 +157,7 @@ function Payment() {
     if (res.ok) {
       let page;
       if (param === "WhatsApp") {
-        let url = `https://wa.me/2348062257480/?text=Hi my name is ${user?.first_name} ${user?.last_name}, I am interested in buying product(s) from your store. My order has already been placed with order ID = ${response.data}, pls check your dashboard for my order details and provide me with a bank account for payment`;
+        let url = `https://wa.me/08165817236/?text=Hi my name is ${user?.first_name} ${user?.last_name}, I am interested in buying product(s) from your store. My order has already been placed with order ID = ${response.data}, pls check your dashboard for my order details and provide me with a bank account for payment`;
         const newWindow = window.open(url, "_blank", "noopener,noreferrer");
         if (newWindow) newWindow.opener = null;
       }
@@ -319,22 +319,22 @@ function Payment() {
       <Spacer />
       <Grid.Container direction={"column"} css={{ gap: "10px" }}>
         {/* <PaystackHookExample />  */}
-        <MyStyledButton
+        {/* <MyStyledButton
           css={{
             fontSize: "large",
             background: "#b59677",
           }}
         >
           Flutterwave
-        </MyStyledButton>
-        <MyStyledButton
+        </MyStyledButton> */}
+        {/* <MyStyledButton
           css={{
             fontSize: "large",
             background: "#b59677",
           }}
         >
           PayPal
-        </MyStyledButton>
+        </MyStyledButton> */}
 
         <MyStyledButton
           onPress={() => setVisible(true)}

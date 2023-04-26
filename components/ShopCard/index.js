@@ -40,7 +40,7 @@ function ShopCard(params) {
 
   // const orig = "http://127.0.0.1:8000";
   return (
-    <div className="col-12 col-md-4 col-lg-3 py-2 p-2  ">
+    <div className="col-12 col-md-4 col-lg-4 py-2 p-2  ">
       <Zoom
         style={{ width: "100%", background: "#8e7459c2" }}
         triggerOnce
@@ -51,7 +51,7 @@ function ShopCard(params) {
           css={{
             borderRadius: "unset",
             width: mq ? "100%" : "100%",
-            height: mq ? "auto" : "300px",
+            height: mq ? "auto" : "400px",
 
             overflow: "hidden",
           }}
@@ -112,7 +112,7 @@ function ShopCard(params) {
             <div></div>
           </div>
           <Button
-            className={`${styles.addToCartWrapper} item-center`}
+            className={`${styles.addToCartWrapper} py-1 item-center`}
             auto
             shadow
             color="#8e7459"

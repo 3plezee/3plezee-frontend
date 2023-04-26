@@ -31,6 +31,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { LatestProducts } from "../utils/data";
 import { Categoryitems } from "../utils/data";
 import { InstagramPics } from "../utils/data";
+import Link from "next/link";
 
 export default function Home() {
   const { isDark } = useTheme();
@@ -304,9 +305,10 @@ export default function Home() {
 
           <Spacer /> */}
         </Container>
-        <Text css={{ letterSpacing: isMd ? "1px" : "8px" }} h3>
-          @ FOLLOW US ON INSTAGRAM
-        </Text>
+        <Link href={'https://instagram.com/3plezee_trendyemporium?igshid=YmMyMTA2M2Y='} className="">
+          <Text css={{ letterSpacing: isMd ? "1px" : "8px" }} h3>
+            FOLLOW US ON INSTAGRAM</Text>
+        </Link>
         <Spacer />
         <Grid.Container>
           {InstagramPics.map((item, index) => {
@@ -521,7 +523,7 @@ export default function Home() {
                   height={"40"}
                 />
               </div>
-              <Text> 3plezee.trendyemporium@gmail.com</Text>
+              <Text> 3plezee.emporium@gmail.com</Text>
             </div>
 
             <Spacer />
@@ -547,6 +549,13 @@ export default function Home() {
     box-sizing: border-box;
   }
 `}</style> */}
+      <div style={{ position: "fixed", bottom: isMd ? "55px" : "20px", right: isMd ? "20px" : "20px" }}>
+        <Link href={'https://instagram.com/3plezee_trendyemporium?igshid=YmMyMTA2M2Y='}>
+          <div className="social-link-wrapper">
+            <Image width={40} height={40} src={'/images/instagram.svg'} />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
